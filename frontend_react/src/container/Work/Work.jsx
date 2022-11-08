@@ -4,8 +4,8 @@ import './Work.scss';
 
 const Work = () => {
   return (
-    <div>About</div>
+    <div>Work</div>
   )
 }
 
-export default About
+export default Work

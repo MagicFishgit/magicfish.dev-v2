@@ -4,8 +4,8 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <div>About</div>
+    <div>Header</div>
   )
 }
 
-export default About
+export default Header

@@ -4,8 +4,8 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <div>About</div>
+    <div>Footer</div>
   )
 }
 
-export default About
+export default Footer

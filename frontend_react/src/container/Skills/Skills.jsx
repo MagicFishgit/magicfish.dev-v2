@@ -4,8 +4,8 @@ import './Skills.scss';
 
 const Skills = () => {
   return (
-    <div>About</div>
+    <div>Skills</div>
   )
 }
 
-export default About
+export default Skills

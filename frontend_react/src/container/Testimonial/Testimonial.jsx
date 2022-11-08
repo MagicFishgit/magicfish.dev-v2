@@ -4,8 +4,8 @@ import './Testimonial.scss';
 
 const Testimonial = () => {
   return (
-    <div>About</div>
+    <div>Testimonial</div>
   )
 }
 
-export default About
+export default Testimonial
