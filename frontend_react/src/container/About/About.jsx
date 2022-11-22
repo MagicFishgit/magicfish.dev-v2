@@ -3,15 +3,21 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './About.scss';
-
-const topics = [
-  {title: 'Frontend', description: 'My frontend focus is React coming with experience in Bootstrap', imgUrl: images.about01},
-  {title: 'Backend', description: 'Backend programming is my most enjoyed aspect of programing.', imgUrl: images.about02},
-  {title: 'Automation', description: 'Automation is a major interest for me... or am I just lazy?', imgUrl: images.about03},
-  {title: 'Learning', description: 'Most of what I know is self taught and I will continue learning as long as I live.', imgUrl: images.about04}
-]
+import { urlFor, client } from '../../client';
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]'
+
+    client.fetch(query)
+      .then((data) => {
+        setAbouts(data);
+      })
+  }, []);
+  
+
   return (
     <>
       <h2 className='head-text'>
@@ -20,11 +26,11 @@ const About = () => {
       </h2>
 
       <div className='app__profiles'>
-        {topics.map((topic, index) => (
-          <motion.div whileInView={{ opacity: 1}} whileHover={{ scale: 1.1 }} transition={{ duration: 0.5, type: 'tween' }} className='app__profile-item' key={ topic.title + index }>
-            <img src={topic.imgUrl} alt='topic title' />
-            <h2 className='bold-text' style={{ marginTop: 20 }}>{topic.title}</h2>
-            <p className='p-text' style={{ marginTop: 10 }}>{topic.description}</p>
+        {abouts.map((about, index) => (
+          <motion.div whileInView={{ opacity: 1}} whileHover={{ scale: 1.1 }} transition={{ duration: 0.5, type: 'tween' }} className='app__profile-item' key={ about.title + index }>
+            <img src={urlFor(about.imgUrl)} alt='topic title' />
+            <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
+            <p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
         ))}
         
@@ -35,3 +41,5 @@ const About = () => {
 }
 
 export default About
+
+//1:56
