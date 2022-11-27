@@ -37,30 +37,30 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className='head-text'>Take a coffee & chat with me</h2>
+      <h2 className='head-text'>💬 Lets have a chat!</h2>
 
       <div className='app__footer-cards'>
         <div className='app__footer-card '>
           <img src={images.email} alt='email' />
-          <a href='mailto:hello@micael.com' className='p-text'>hello@micael.com</a>
+          <a href='mailto:rudivisagiex@gmail.com' className='p-text'>rudivisagiex@gmail.com</a>
         </div>
         <div className='app__footer-card'>
           <img src={images.mobile} alt='phone' />
-          <a href='tel:+1 (123) 456-7890' className='p-text'>+1 (123) 456-7890</a>
+          <a href='tel:+27 (078) 688-9677' className='p-text'>+27 (078) 688-9677</a>
         </div>
       </div>
       {!isFormSubmitted ? (
         <div className='app__footer-form app__flex'>
           <div className='app__flex'>
-            <input className='p-text' type='text' placeholder='Your Name' name='username' value={username} onChange={handleChangeInput} />
+            <input className='p-text' type='text' placeholder='Name' name='username' value={username} onChange={handleChangeInput} />
           </div>
           <div className='app__flex'>
-            <input className='p-text' type='email' placeholder='Your Email' name='email' value={email} onChange={handleChangeInput} />
+            <input className='p-text' type='email' placeholder='Email' name='email' value={email} onChange={handleChangeInput} />
           </div>
           <div>
             <textarea
               className='p-text'
-              placeholder='Your Message'
+              placeholder='Message'
               value={message}
               name='message'
               onChange={handleChangeInput}
@@ -71,7 +71,7 @@ const Footer = () => {
       ) : (
         <div>
           <h3 className='head-text'>
-            Thank you for getting in touch!
+            Thank you! I will reach out to you soon.
           </h3>
         </div>
       )}
