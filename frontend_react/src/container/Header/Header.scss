@@ -55,15 +55,17 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    margin-top: 3rem;
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
 
     .badge-cmp, .tag__cmp {
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
         border: var(--white-color);
         border-radius: 15px;
         flex-direction: row;
         width: auto;
 
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
 
     .tag__cmp {

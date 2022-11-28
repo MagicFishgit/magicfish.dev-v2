@@ -38,11 +38,11 @@ const Header = () => {
 
       <motion.div whileInView={{ opacity: [0 , 1] }} transition={{ duration: 2, delayChildren: 0.5 }} className="app__header-img">
         <img src={images.profile} alt='Profile Backend' />
-        <motion.img whileInView={{ scale: [0 , 1] }} transition={{ duration: 4, ease: 'easeInOut' }} src={images.circle} alt="Profile framing circle" className='overlay_circle' />
+        <motion.img whileInView={{ scale: [0 , 1] }} transition={{ duration: 1.5, ease: 'easeInOut' }} src={images.circle} alt="Profile framing circle" className='overlay_circle' />
       </motion.div>
 
       <motion.div variant={scaleVariants} whileInView={scaleVariants.whileInView} className='app__header-circles'>
-          {[images.javascript, images.redux, images.sass].map((circle, index) => (
+          {[images.javascript, images.react, images.sass].map((circle, index) => (
             <div className='circle-cmp app__flex' key={`circle-${index}`}>
               <img src={circle} alt="circles" />
             </div>
