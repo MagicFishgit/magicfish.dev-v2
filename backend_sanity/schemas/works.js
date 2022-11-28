@@ -15,6 +15,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'longdescription',
+        title: 'LongDescription',
+        type: 'string',
+      },
+      {
         name: 'projectLink',
         title: 'Project Link',
         type: 'string',
