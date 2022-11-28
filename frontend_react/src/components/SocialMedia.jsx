@@ -1,17 +1,17 @@
 import React from 'react';
-import { BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { BsGithub, BsMailbox, BsTwitter } from 'react-icons/bs';
 
 const SocialMedia = () => {
   return (
     <div className='app__social'>
         <div>
-            <BsGithub />
+          <a href='https://github.com/MagicFishgit' target='_blank' rel='noreferrer'><BsGithub /></a>
         </div>
         <div>
-            <BsInstagram />
+            <a href='https://twitter.com/magicfeesh' target='_blank' rel='noreferrer'><BsTwitter /></a>
         </div>
         <div>
-            <BsTwitter />
+            <a href='mailto:rudivisagiex@gmail.com'><BsMailbox/></a>
         </div>
 
     </div>
