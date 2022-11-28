@@ -84,15 +84,14 @@ const Work = () => {
             </div>  
           ))}
       </motion.div>
-
       
-        <motion.div animate={animateCard} transition={{ duration: 0.5, delayChildren: 0.5}} className="app__work-portfolio" style={{width: '400px', height: '200px'}}>
+        <div className='app__description-long'>
           {(isShown) && (
             <div>
               {description}
             </div>
           )}
-        </motion.div>
+        </div>
   
     </>
   )

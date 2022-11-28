@@ -145,3 +145,24 @@
         text-align: justify;
     }
 }
+
+.app__description-long{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 8rem;
+    font-family: var(--font-base);
+    font-size: 1.3rem;
+
+    @media screen and (min-width: 2000px) {
+        height: 10rem;
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+       height: 4rem;
+       font-size: 0.9rem;
+    }
+}
