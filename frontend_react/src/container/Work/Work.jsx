@@ -10,6 +10,8 @@ const Work = () => {
 
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [isShown, setIsShown] = useState(false);
+  const [description, setDescription] = useState('');
 
   //Sanity states
   const [works, setWorks] = useState([]);
@@ -61,7 +63,7 @@ const Work = () => {
               <div className='app__work-img app__flex'>
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
-                <motion.div whileHover={{opacity: [0, 1]}} transition={{ duration: 0.25, staggerChildren: 0.5, ease: 'easeInOut' }} className='app__work-hover app__flex'>
+                <motion.div whileHover={{opacity: [0, 1]}} transition={{ duration: 0.25, staggerChildren: 0.5, ease: 'easeInOut' }} className='app__work-hover app__flex' onMouseEnter={() => {setIsShown(true); setDescription(work.longDescription);}} onMouseLeave={() => {setIsShown(false); setDescription('');}}>
                   <a href={work.projectLink} target='_blank' rel='noreferrer'>
                     <motion.div whileInView={{scale: [0, 1]}} whileHover={{scale: [1, 0.9]}} transition={{ duration: 0.25 }} className='app__flex'>
                       <AiFillEye />
@@ -79,9 +81,19 @@ const Work = () => {
                 <h4 className='bold-text'>{work.title}</h4>
                 <p className='p-text' style={{ marginTop: 10}}>{work.description}</p>
               </div>
-            </div>
+            </div>  
           ))}
       </motion.div>
+
+      
+        <motion.div animate={animateCard} transition={{ duration: 0.5, delayChildren: 0.5}} className="app__work-portfolio" style={{width: '400px', height: '200px'}}>
+          {(isShown) && (
+            <div>
+              {description}
+            </div>
+          )}
+        </motion.div>
+  
     </>
   )
 }

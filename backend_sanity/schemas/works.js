@@ -15,7 +15,7 @@ export default {
         type: 'string',
       },
       {
-        name: 'longdescription',
+        name: 'longDescription',
         title: 'LongDescription',
         type: 'string',
       },
